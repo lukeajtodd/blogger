@@ -28,7 +28,7 @@
         padding: 0.5rem;
     }
     .date {
-        background: black;
+        background: #000;
         color: #fff;
         padding: 0.5rem;
     }
