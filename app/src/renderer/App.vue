@@ -1,13 +1,16 @@
 <template>
   <div id="#app">
-    <router-view></router-view>
+    <router-view :articles="articles"></router-view>
   </div>
 </template>
 
 <script>
-  import store from 'renderer/vuex/store'
   export default {
-    store
+    data() {
+      return {
+        articles: this.$store.state.articles
+      }
+    }
   }
 </script>
 

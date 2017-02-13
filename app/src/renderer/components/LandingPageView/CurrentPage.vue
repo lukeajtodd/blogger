@@ -1,4 +1,5 @@
 <template>
+  
   <p>
     You are currently at <code>`{{ $route.path }}`</code> on the <code>`{{ $route.name }}`</code> view.
   </p>
