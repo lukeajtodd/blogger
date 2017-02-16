@@ -22,7 +22,7 @@ const router = new Router({
 /* eslint-disable no-new */
 new Vue({
   firebase: {
-    articles: db.ref('/articles')
+    articles: db.ref('articles')
   },
   computed: Vuex.mapGetters([
     'articles'

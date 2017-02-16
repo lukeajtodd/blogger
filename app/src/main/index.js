@@ -12,8 +12,13 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
+    title: 'Blogger',
+    bacgkroundColor: '#000',
     height: 600,
-    width: 800
+    width: 500,
+    minWidth: 500,
+    minHeight: 600,
+    frame: false
   })
 
   mainWindow.loadURL(winURL)

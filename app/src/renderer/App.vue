@@ -1,21 +1,21 @@
 <template>
   <div id="#app">
-    <router-view :articles="articles"></router-view>
+    <router-view :articles="this.getArticles"></router-view>
   </div>
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-        articles: this.$store.state.articles
-      }
+    computed: {
+      getArticles: function() {
+          return this.$store.getters.sortedArticles;
+        }
     }
   }
 </script>
 
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Lato:300);
+  @import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Raleway');
 
   * {
     margin: 0;
@@ -26,11 +26,11 @@
   body { height: 100%; }
 
   body {
-    align-items: top;
     background-position: center;
-    display: flex;
-    font-family: Lato, Helvetica, sans-serif;
-    justify-content: left;
-    text-align: left;
+    font-family: 'Raleway', Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-family: 'Bungee Inline', Helvetica, sans-serif;
   }
 </style>
