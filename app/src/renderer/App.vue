@@ -20,6 +20,8 @@
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: aliased;
   }
 
   html,
@@ -28,9 +30,15 @@
   body {
     background-position: center;
     font-family: 'Raleway', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
   }
 
   h1 {
     font-family: 'Bungee Inline', Helvetica, sans-serif;
+  }
+
+  input, textarea {
+    font-family: 'Raleway';
   }
 </style>

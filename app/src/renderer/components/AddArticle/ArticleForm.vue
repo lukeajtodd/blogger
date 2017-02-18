@@ -56,15 +56,15 @@
 <style scoped>
 form {
     position: relative;
-    display: block;
     margin: 0 auto;
-    padding: 0;
     margin-bottom: 4rem;
-    width: 60%;
+    max-width: 600px;
+    width: 85%;
 }
 input, textarea {
     padding: 0.5rem;
-    margin: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
 }
 label {
     display: block;
@@ -72,11 +72,9 @@ label {
     margin: 1rem;
 }
 .titleInput {
-    width: 100%;
     border: 1px solid #333;
 }
 .newContent {
-    width: 100%;
     height: 8rem;
     border: 1px solid #333;
     resize: none;
@@ -84,6 +82,7 @@ label {
 button {
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     display: inline-block;
     padding: 0.5rem;

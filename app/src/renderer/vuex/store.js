@@ -1,16 +1,16 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import Firebase from 'firebase'
-import VuexFire from 'vuexfire'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import Firebase from 'firebase';
+import VuexFire from 'vuexfire';
 // import { generateMutations } from 'vuexfire'
 
-import * as actions from './actions'
-import * as getters from './getters'
+import * as actions from './actions';
+import * as getters from './getters';
 // import * as mutations from './mutations'
-import modules from './modules'
+// import modules from './modules';
 
-Vue.use(Vuex)
-Vue.use(VuexFire)
+Vue.use(Vuex);
+Vue.use(VuexFire);
 
 var config = {
     apiKey: "AIzaSyBZr-V2fVbOk__KwvTKrL-wnXyK2PQ6YEw",
@@ -22,10 +22,8 @@ var config = {
 
 Firebase.initializeApp(config);
 
-console.log({ ...VuexFire.mutations })
-
 // Export db for use in main
-export const db = Firebase.database()
+export const db = Firebase.database();
 
 const mutations = Object.assign({
   addArticle(state, article) {
@@ -43,5 +41,5 @@ export const store = new Vuex.Store({
   mutations: mutations,
   actions,
   getters,
-  modules
-})
+  // modules
+});
