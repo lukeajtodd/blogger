@@ -14,7 +14,7 @@
 
 <script>
   import ArticleList from './HomePage/ArticleList';
-  import ArticleForm from './AddArticle/ArticleForm';
+  import ArticleForm from './HomePage/ArticleForm';
   import { remote } from 'electron'
   export default {
     components: {

@@ -1,12 +1,13 @@
 <template>
     <div id="article-list">
-        <ul>
+        <ul v-if="articles != ''">
             <li v-for="article in articles">
                 {{ article.title }} -
                 <span class="date">{{ article.createdAt }}</span>
-                <span class="close" @click="removeArticle(article)">x</span>
+                <span class="del" @click="removeArticle(article)">x</span>
             </li>
         </ul>
+        <span v-else class="empty">EMPTY</span>
     </div>
 </template>
 
@@ -36,7 +37,17 @@
         padding: 0.5rem;
         position: relative;
     }
-    span.close {
+    span.empty {
+        margin: 0 auto;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 60%;
+        text-align: center;
+        padding: 2rem;
+        padding-top: 3rem;
+    }
+    span.del {
         cursor: pointer;
         position: absolute;
         right: -0.5rem;
